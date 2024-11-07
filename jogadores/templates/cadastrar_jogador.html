@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+   <meta charset="UTF-8">
+   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   <title>Cadastrar Jogador</title>
+</head>
+<body>
+   <h1>Cadastrar Novo Jogador</h1>
+   <form method="POST" action="{{ url_for('Jogadores.cadastrar_jogador') }}">
+      <label for="nome">Nome:</label>
+      <input type="text" id="nome" name="nome" required>
+
+      <label for="classe">Classe:</label>
+      <input type="text" id="classe" name="classe" required>
+
+      <label for="vida">Vida:</label>
+      <input type="number" id="vida" name="vida" required>
+
+      <button type="submit">Cadastrar</button>
+   </form>
+   <a href="{{ url_for('Jogadores.listar_jogadores') }}">Voltar para a lista de jogadores</a>
+</body>
+</html>
